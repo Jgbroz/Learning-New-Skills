@@ -1,5 +1,8 @@
 package com.naven.testRun;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Bike implements Vehicles
 {
 	public void drive()

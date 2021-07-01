@@ -1,10 +1,26 @@
 package com.naven.testRun;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car implements Vehicles
 {
+	@Autowired
+	private Tyre tyre;
+	
+	public Tyre getTyre() {
+		return tyre;
+	}
+
+	public void setTyre(Tyre tyre) {
+		this.tyre = tyre;
+	}
+
+
 	public void drive()
 	{
-		System.out.println("It is Driving");
+		System.out.println("car " + tyre);
 		
 	}
 }
